@@ -16,7 +16,7 @@ export ZSH_THEME="skaro"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew pip gem osx)
+plugins=(git github pip gem deb debian vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,46 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f $HOME/.useful-extras.sh ]] && source $HOME/.useful-extras.sh
 
-# Aliases
-alias gvim=mvim
-alias python32="arch -i386 python"
-
-export HOMEBREW_PREFIX=/usr/local
-export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
-
 export EDITOR=vim
-
-# GO
-export GOROOT=`brew --prefix go`
-export GOBIN=$HOMEBREW_PREFIX/bin
-export GOARCH=amd64
-export GOOS=darwin
-
-# NODE
-export NODE_PATH=/Users/dougfritz/Homebrew/lib/node
-
-# Python virtualenv
-#source $HOME/.python2.7/bin/activate
-#export PYTHONPATH=$HOME/.python2.7
-
-# NPM
-export PATH=$HOMEBREW_PREFIX/share/npm/bin:$PATH
-
-# Clojure
-export CLASSPATH=$CLASSPATH:$HOMEBREW_PREFIX/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
-
-# Cljr
-export PATH=$PATH:$HOME/.cljr/bin
-
-# pkg-config
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOMEBREW_PREFIX/lib:$HOMEBREW_PREFIX/include
-
-# sbt-appengine-plugin
-export APPENGINE_SDK_HOME=`brew --prefix app-engine-java-sdk`/libexec
-export JREBEL_JAR_PATH=/Applications/ZeroTurnaround/JRebel/jrebel.jar
-
-# Appengine
-export APPENGINE_SDK_HOME=`brew --prefix app-engine-java-sdk`/libexec
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
