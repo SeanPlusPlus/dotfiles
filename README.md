@@ -1,25 +1,30 @@
-Doug's Dot Files
-===============
+# Dotfiles
 
-    git clone git@github.com:doug/dotfiles.git --recursive ~/.dotfiles
-    cd ~/.dotfiles
-    rake install
+Modern development environment configuration.
 
-This is for people who use vim, zsh, and tmux.
+## Files
 
-I also recommend checking out [solarized](http://ethanschoonover.com/solarized) for your terminal
-colors.
+- `.vimrc` - Vim configuration with JavaScript syntax highlighting and auto-reload
+- `.zshrc` - Zsh configuration with nwatch/pwatch functions for live reloading
+- `.tmux.conf` - Tmux configuration (if present)
 
-You should also install [homebrew](https://github.com/mxcl/homebrew) if on OSX, this zshrc makes bad
-bad assumptions about your homebrew install and will probably need to be modded to work properly,
-until I fix it to make it more general. Also, I use [Chris Johnsen's tmux
-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard) to get tmux to play nice with
-pbcopy and pbpaste, I recommend installing that as well if you are using tmux.
+## Setup
 
-I would add megazoomer and mouseterm as SIMBL plugins to get fullscreen with mouse support.
-[http://bitheap.org/mouseterm/](http://bitheap.org/mouseterm/)
-[http://ianhenderson.org/megazoomer.html](http://ianhenderson.org/megazoomer.html)
+```bash
+# Vim
+cp .vimrc ~/.vimrc
 
-ZSH files provided by [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-VIMFILES are my collection of other peoples gitrepos as submodules with my own and others twists
-The rake file was modded from [ryanb's dotfiles](https://github.com/ryanb/dotfiles)
+# Zsh  
+cp .zshrc ~/.zshrc
+source ~/.zshrc
+
+# Tmux (if present)
+cp .tmux.conf ~/.tmux.conf
+```
+
+## Features
+
+- `nwatch file.js` - Watch and re-run Node.js files on save
+- `pwatch file.py` - Watch, format with ruff, and re-run Python files on save
+- Vim auto-reload for external file changes
+- JavaScript syntax highlighting with better colors
