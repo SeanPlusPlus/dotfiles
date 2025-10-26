@@ -6,6 +6,7 @@ Modern development environment configuration with Oh My Zsh, Powerlevel10k, and 
 
 - `.vimrc` - Vim configuration with JavaScript syntax highlighting and auto-reload
 - `.zshrc` - Zsh configuration with Oh My Zsh, Powerlevel10k theme, and development utilities
+- `eslint.config.js` - Global ESLint configuration with no-semicolon rules
 - `.tmux.conf` - Tmux configuration (if present)
 
 ## Setup
@@ -29,7 +30,7 @@ cp .tmux.conf ~/.tmux.conf
 - **Oh My Zsh** framework with git plugin for enhanced git integration
 
 ### Development Tools
-- `nwatch file.js` - Watch and re-run Node.js files on save using `entr`
+- `nwatch file.js` - Watch, format with Prettier/ESLint, and re-run JavaScript files on save
 - `pwatch file.py` - Watch, format with ruff, and re-run Python files on save
 - `prun file.py` - One-time format with ruff and run Python file
 
@@ -37,6 +38,11 @@ cp .tmux.conf ~/.tmux.conf
 - **Vi mode** enabled with visual cursor changes (block for normal, line for insert)
 - Fast key timeout (`KEYTIMEOUT=1`) for responsive vi mode switching
 - Enhanced bracketed paste handling to prevent auto-escaping
+
+### JavaScript Tooling
+- **ESLint** with global configuration enforcing no semicolons
+- **Prettier** for consistent code formatting
+- Automatic formatting and linting on file save with `nwatch`
 
 ### Environment Setup
 - **NVM** integration for Node.js version management

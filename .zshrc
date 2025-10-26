@@ -150,7 +150,7 @@ zle -N bracketed-paste bracketed-paste-magic
 
 # Watch and re-run node file on save
 nwatch() {
-  echo $1 | entr node $1
+  echo $1 | entr -p sh -c "npx prettier --write $1 && npx eslint --config ~/eslint.config.js --fix $1 && node $1"
 }
 # Watch and re-run python file on save
 pwatch() {
